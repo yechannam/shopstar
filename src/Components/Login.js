@@ -5,8 +5,7 @@ export default function Login () {
 		right: "10px",
 	}
 	return (
-		<div
-		style={style}>
+		<div style={style}>
 			login
 		</div>
 	);

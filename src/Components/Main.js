@@ -1,9 +1,10 @@
+import Post from "./Post";
 
 
 export default function Main() {
 	return (
 		<div className='list'>
-			<>목록</>
+			<Post />
 		</div>
 	)
 }

@@ -3,18 +3,6 @@
 	flex-direction: row;
 }
 
-.main::after {
-	position: fixed;	
-	border: 5px solid #525252a4;
-	position: 'fixed';
-    top: '0';
-    left: '0';
-    right: '0';
-    bottom: '0';
-    border: '2px solid #000';
-    padding: '10px';
-}
-
 .border {
 	margin-left: 80px;
     position: fixed;
