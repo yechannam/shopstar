@@ -1,0 +1,30 @@
+/* Nav.css */
+
+.navbar {
+    position: fixed;
+    display: flex;
+	height: 100%;
+    flex-direction: column; /* Set the flex direction to column */
+    align-items: center; /* Align items to the start (left side) */
+    padding: 10px; /* Add some padding for spacing */
+    gap: 10px;
+}
+
+.navbarMenu {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px; /* Add margin to create space between menu items */
+	margin-top: 10px;
+}
+
+.navbarMenu:hover {
+    color: blue; /* Change color on hover if needed */
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+
