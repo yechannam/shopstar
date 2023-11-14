@@ -15,13 +15,13 @@ export default function Main() {
 		},
 		{
 			id: 3,
-			name: 'new shows',
+			name: 'new shoes',
 			price: '110000',
 		}
 	]
 	const posts = (
 		postsInfo.map(function(a) {
-			return <Post name={a.name} price={a.price}></Post>
+			return <Post key={a.id} name={a.name} price={a.price}></Post>
 	}));
 
 	return (

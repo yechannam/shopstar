@@ -19,14 +19,21 @@ export default function Post(props) {
 		fontSize: '25px',
 	}
 
-	const imgs={};
+	const imgs=[
+		["./img/post/shirt.png"],
+	];
+
+	const imgList = imgs.map((a,i)=>{
+		console.log(a, i);
+		return (<ImgList key={i} imgPaths={a}/>);
+	})
 
 	return (
 		<div style={style}>
 			<h1 style={headStyle}>{props.name}</h1>
 			<div style={{border: '1px solid #52525255', width:'100%'}}></div>
 
-			<ImgList imgs={imgs}/>
+			{imgList}
 			
 			<div style={{border: '1px solid #52525255', width:'100%', marginTop: 'auto', marginBottom: '15px'}}></div>
 			
@@ -35,13 +42,19 @@ export default function Post(props) {
 	);
 }
 
-function ImgList() {
-	return <img alt="set" src="./img/home.png" style={
-		{
-			padding: '10px',
-			maxHeight: '500px',
-		}
-	}></img>
+function ImgList(props) {
+	const imgs = props.imgPaths.map((a,i)=>{
+		return <img alt="set" key={i} src={a} style={
+			{
+				padding: '10px',
+				maxHeight: '500px',
+			}
+		}></img>
+	})
+
+	return <>
+		{imgs}
+	</>
 }
 
 
@@ -51,6 +64,8 @@ function PostNav(props) {
 		width: '35px',
 		marginLeft: '10px',
 	}
+
+	const formatPrice = Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' }).format(props.price);
 	return (
 	<div style={
 		{
@@ -68,7 +83,7 @@ function PostNav(props) {
 			marginLeft: 'auto',
 			marginRight: '20px',
 			fontSize: '20px',
-		}} >{props.price}</div>
+		}} >{formatPrice}</div>
 	</div>
 	);
 }
