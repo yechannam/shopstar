@@ -48,6 +48,7 @@ function ImgList(props) {
 			{
 				padding: '10px',
 				maxHeight: '500px',
+				borderRadius: '3%',
 			}
 		}></img>
 	})
