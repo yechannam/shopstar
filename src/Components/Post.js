@@ -19,12 +19,17 @@ export default function Post(props) {
 		fontSize: '25px',
 	}
 
+	const imgs={};
+	
 	return (
 		<div style={style}>
 			<h1 style={headStyle}>{props.name}</h1>
 			<div style={{border: '1px solid #52525255', width:'100%'}}></div>
-			<ImgList />
+
+			<ImgList imgs={imgs}/>
+			
 			<div style={{border: '1px solid #52525255', width:'100%', marginTop: 'auto', marginBottom: '15px'}}></div>
+			
 			<PostNav />
 		</div>
 	);
@@ -40,10 +45,10 @@ function ImgList() {
 }
 
 
-function PostNav() {
+function PostNav(props) {
 	const Navstyle = {
-		height: '40px',
-		width: '40px',
+		height: '35px',
+		width: '35px',
 		marginLeft: '10px',
 	}
 	return (
@@ -56,9 +61,14 @@ function PostNav() {
 			maxHeight: '50px',
 		}
 	}>
-		<img alt="logo" style={Navstyle} src="img/logo.png"/>
-		<img alt="logo" style={Navstyle} src="img/logo.png"/>
-		<img alt="logo" style={Navstyle} src="img/logo.png"/>
-		</div>
+		<img alt="heart" style={Navstyle} src="img/heart.png" />
+		<img alt="add cart" style={Navstyle} src="img/cart.png"/>
+		<img alt="share" style={Navstyle} src="img/share.png"/>
+		<div alt="price" style={{
+			marginLeft: 'auto',
+			marginRight: '20px',
+			fontSize: '20px',
+		}} >{props.price}</div>
+	</div>
 	);
 }
