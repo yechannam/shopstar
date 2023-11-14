@@ -20,7 +20,7 @@ export default function Post(props) {
 	}
 
 	const imgs={};
-	
+
 	return (
 		<div style={style}>
 			<h1 style={headStyle}>{props.name}</h1>
@@ -30,7 +30,7 @@ export default function Post(props) {
 			
 			<div style={{border: '1px solid #52525255', width:'100%', marginTop: 'auto', marginBottom: '15px'}}></div>
 			
-			<PostNav />
+			<PostNav price={props.price}/>
 		</div>
 	);
 }
