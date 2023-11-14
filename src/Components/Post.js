@@ -1,6 +1,7 @@
 
 export default function Post(props) {
 	const style = {
+		marginTop: '40px',
 		border: '2px solid #52525255',
 		borderRadius: '5%',
 		height: '100vh',
