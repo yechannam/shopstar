@@ -40,7 +40,7 @@
   .image-container {
     width: 400px;
     height: 600px;
-    background-image: url('./close.jpg');
+    background-image: url('../img/close.jpg');
     background-size: cover; /* 이미지를 컨테이너에 맞게 조절 */
     /* 추가적인 스타일링 */
   }

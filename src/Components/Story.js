@@ -1,6 +1,6 @@
 import './Story.css'
 import Popup from 'reactjs-popup';
-import myimg from './close.jpg'
+import myimg from '../img/close.jpg'
 
 function Story(props) {
   return (
