@@ -1,10 +1,15 @@
 import './Story.css'
+import Popup from 'reactjs-popup';
+import myimg from '../img/close.jpg'
 
 function Story(props) {
   return (
     <div className='story-feed-outer-circle'>
-      <div className='story-feed-inner-circle'>
-      </div>
+      <Popup trigger={<div className='story-feed-inner-circle'></div>} modal>
+        {/* <img src={myimg}></img> */}
+        <div className="image-container">
+        </div>
+      </Popup>
     </div>
   );
 }
